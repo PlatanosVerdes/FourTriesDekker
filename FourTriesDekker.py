@@ -12,21 +12,21 @@ def primerIntentoT1():
     while True:
         while init.turn != 0:
             pass
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
             
-            init.turn = 1
+        init.turn = 1
 
 def primerIntentoT2():
     while True:
         while init.turn != 1:
             pass
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
         
-            init.turn = 0
+        init.turn = 0
     
 
 #Algoritmos del segundo intento#
@@ -34,25 +34,25 @@ def segundoIntentoT1():
     while True:
         while init.states[1]:
             pass
-            init.states[0] = True
+        init.states[0] = True
 
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
         
-            init.states[0] = False
+        init.states[0] = False
 
 def segundoIntentoT2():
     while True:
         while init.states[0]:
             pass
-            init.states[1] = True
+        init.states[1] = True
             
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
         
-            init.states[1] = False
+        init.states[1] = False
 
 #Algoritmos del tercer intento
 def tercerIntentoT1():
@@ -60,22 +60,22 @@ def tercerIntentoT1():
         init.states[0] = True
         while init.states[1]:
             pass
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
         
-            init.states[0] = False
+        init.states[0] = False
 
 def tercerIntentoT2():
     while True:
         init.states[1] = True
         while init.states[0]:
             pass
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
         
-            init.states[1] = False
+        init.states[1] = False
 
 #Algoritmos del cuarto intento
 def cuartoIntentoT1():
@@ -85,11 +85,11 @@ def cuartoIntentoT1():
             init.states[0] = False
             init.states[0] = True
 
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
         
-            init.states[1] = False
+        init.states[1] = False
 
 def cuartoIntentoT2():
     while True:
@@ -98,11 +98,11 @@ def cuartoIntentoT2():
             init.states[1] = False
             init.states[1] = True
 
-            #Seccion critica
-            init.contador += 1
-            print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
+        #Seccion critica
+        init.contador += 1
+        print("Soy el {} y contador a: ".format(threading.current_thread().name), init.contador)
         
-            init.states[0] = False
+        init.states[0] = False
 
 
 #Menu
